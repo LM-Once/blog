@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.it.blog.mapper.UserMapper" >
+    <resultMap id="BaseResultMap" type="com.it.blog.entity.User" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+        <result column="sex" property="sex" jdbcType="INTEGER"/>
+    </resultMap>
+    
+    <sql id="Base_Column_List" >
+        id, user_name, age, sex
+    </sql>
+ 
+ 	<select id="queryUserList" resultMap="BaseResultMap">
+ 		SELECT 
+ 		<include refid="Base_Column_List" />
+ 		 FROM blog_user
+ 	</select>
+
+ 	<select id="queryUserInfoByName" parameterType="User" resultMap="BaseResultMap">
+        SELECT * FROM `user` WHERE user_name =#{userName}
+    </select>
+ 	<insert id="saveUser" parameterType="User">
+ 		insert into user (user_name,age,sex) values(#{userName},#{age},#{sex})
+ 	</insert>
+</mapper>
