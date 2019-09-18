@@ -1,5 +1,5 @@
 package com.it.blog;
-
+/////
 public class integer {
 	
 	public static void main(String[] args) {
