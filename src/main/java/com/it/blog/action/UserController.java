@@ -60,6 +60,7 @@ public class UserController extends BaseAction{
 		String username = re.getParameter("username");
 		User user = new User();
 		user.setUserName(username);
+		System.out.println("BT场景");
 		return userServiceImpl.queryUserInfoByName(user);
 	}
 
