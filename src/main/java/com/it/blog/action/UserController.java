@@ -32,7 +32,7 @@ public class UserController extends BaseAction{
 	}
 	@RequestMapping(value="login")
 	public String login (){
-		logger.info("页面跳转");
+		logger.info("页面跳转1111");
 		return "user/test";
 	}
 	@RequestMapping(value="queryUserList")
