@@ -26,7 +26,7 @@ public class UserController extends BaseAction{
 
 	@RequestMapping(value="index")
 	public ModelAndView test (){
-		logger.info("页面跳转");
+		logger.info("页面跳转11");
 		ModelAndView mav = new ModelAndView("index");
 		return mav;
 	}
