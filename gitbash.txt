@@ -1,0 +1,27 @@
+
+mkdir
+
+pwd
+
+git init
+
+git diff <file>
+
+git add ./*   //把文件添加到暂存区
+git diff --cached  
+
+git commit -m "测试"   //提交所有add过得文件 后面是注释
+git status -v  //查看仓库状态
+git show
+
+git push
+
+git pull
+
+git log  //查看历史记录
+
+git reset -- hard HEAD^[^^,^^^]       回退几个版本，有几个^就表示回退几个版本
+
+git reset  –hard HEAD~100      回退100个版本，可以是任意数字
+
+cat <file>        查看文件内容
