@@ -1,0 +1,84 @@
+{
+  "data":[{
+    "uri":"stm",
+    "data":[
+      {
+        "uri":"monitor",
+        "data":[
+          {
+            "uri":"index",
+            "columns": ["id","项目","所属模块","专项名称","状态","标准时长","人力耗时","自动化耗时","开始时间","结束时间","创建者","操作"],
+            "listUri":"/stm/monitor/list",
+            "createUri":"/stm/monitor/create",
+            "stopUri":"/stm/monitor/stop",
+            "detailUri":"/stm/monitor/detail",
+            "deleteUri":"/stm/monitor/delete"
+          },{
+            "uri":"detail",
+            "updateTimeUri":"/stm/monitor/updateTime",
+            "updateUri":"/stm/monitor/update",
+            "uploadUri":"/stm/monitor/upload",
+            "downloadUri":"/stm/monitor/download"
+          },{
+            "uri":"create",
+            "submitUri":"/stm/monitor/createMonitor",
+            "specialListUri":"/stm/special/list",
+            "detailUri":"/stm/monitor/detail",
+            "projectUri":"/stm/project/list"
+          }
+        ]
+      },
+      {
+        "uri":"special",
+        "data":[
+          {
+            "uri":"index",
+            "columns": ["id","所属模块","专项名称","标准时长","开发责任人","测试负责人","操作"],
+            "listUri":"/stm/special/list",
+            "createUri":"/stm/special/create",
+            "deleteUri":"/stm/special/delete"
+          },
+          {
+            "uri":"create",
+            "submitUri":"/stm/monitor/insert",
+            "specialListUri":"/stm/special/list"
+          }
+        ]
+      },
+      {
+        "uri":"admin",
+        "data":[
+          {
+            "uri":"list",
+            "columns": ["工号","姓名","角色","操作"],
+            "listUri":"/stm/admin/userlist",
+            "insertuserUri":"/stm/admin/insertuser",
+            "updateuserUri":"/stm/admin/updateuser",
+            "deleteuserUri":"/stm/admin/deleteuser",
+            "rolelistUri":"/stm/admin/rolelist"
+          }
+        ]
+      },
+      {
+        "uri":"project",
+        "data":[
+          {
+            "uri":"index",
+            "columns": ["项目代号","手机名称","人力耗时","自动化耗时","专项测试数","项目管理人","状态","操作"],
+            "listUri":"/stm/project/list",
+            "detailUri":"/stm/project/detail",
+            "insertUri":"/stm/project/insert",
+            "deleteUri":"/stm/project/delete",
+            "endUri":"/stm/project/end"
+          },
+          {
+            "uri":"detail",
+            "columns": ["id","项目","所属模块","专项名称","状态","标准时长","人力耗时","自动化耗时","开始时间","结束时间","创建者","操作"],
+            "listUri":"/stm/project/detailList",
+            "detailUri":"/stm/monitor/detail"
+          }
+        ]
+      }
+    ]
+  }]
+}
