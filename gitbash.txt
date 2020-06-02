@@ -25,3 +25,7 @@ git reset -- hard HEAD^[^^,^^^]       回退几个版本，有几个^就表示�
 git reset  –hard HEAD~100      回退100个版本，可以是任意数字
 
 cat <file>        查看文件内容
+
+git branch -a 查看远程分支
+git remote update origin  #fetch远程分支
+git checkout -b feature-Otest-3711 origin/feature-Otest-3711 切换分支
