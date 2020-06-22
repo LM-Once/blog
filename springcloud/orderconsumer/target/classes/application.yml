@@ -1,0 +1,12 @@
+server:
+  port: 9999
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9998/eureka/
+  instance:
+    instance-id: order-consumer9999
+    prefer-ip-address: true
+spring:
+  application:
+  name: SERVICE-CONSUMER

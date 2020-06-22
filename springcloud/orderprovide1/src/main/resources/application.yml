@@ -1,0 +1,62 @@
+server:
+  port: 9996
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9998/eureka/
+  instance:
+    instance-id: order-provide9996
+    prefer-ip-address: true
+spring:
+  application:
+    name: SERVICE-PROVIDE
+  datasource:
+    #url: jdbc:mysql://172.17.196.252:3306/test?useUnicode=true&characterEncoding=utf-8
+    #url: jdbc:mysql://172.17.196.217:3306/special_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  #redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # redis 服务器连接密码(默认为空)
+    password: 123456
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 30000
+
+  # http://127.0.0.1:8161 控制台
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    in-memory: false
+    pool:
+      max-connections: 5
+      idle-timeout: 30000
+      expiry-timeout: 0
+  #rabbitmq:
+   # host: 127.0.0.1
+   # port: 5672
+   # username: admin
+   # password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.it.domain  # 注意：对应实体类的路径
+  configuration:
+    call-setters-on-nulls: true
+
+logging:
+  level:
+    com.it.mapper : debug
+  file: spring.log
