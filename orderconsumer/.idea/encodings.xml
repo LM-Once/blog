@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/BTNMouseListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/Common.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/FXMLController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/ImageJpanel.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/LinkLabel.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/config/DefaultTabNameGenerator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/config/TabNameGenerator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/config/TerminalConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/helper/FxHelper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/helper/IOHelper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/it/controller/swing/helper/ThreadHelper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/fxml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/images/login.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/styles" charset="GBK" />
+  </component>
+</project>

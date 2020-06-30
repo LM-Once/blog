@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"  >
+<mapper namespace="com.it.mapper.PersonMapper">
+
+
+    <select id="findAll" resultType="person">
+        SELECT
+            id,
+            person_name personName,
+            person_gender personGender,
+            description
+        FROM
+            person
+    </select>
+
+    <select id="findOne" resultType="person">
+        SELECT
+            id,
+            person_name personName,
+            person_gender personGender,
+            description
+        FROM
+            person
+        WHERE
+            id = #{id}
+    </select>
+
+    <insert id="savePerson" useGeneratedKeys="true" keyProperty="id" >
+        insert into person
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="personName != null">
+                person_name,
+            </if>
+            <if test="personGender != null">
+                person_gender,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="personName != null">
+                #{personName},
+            </if>
+            <if test="personGender != null">
+                #{personGender},
+            </if>
+            <if test="description != null">
+                #{description},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updatePerson" parameterType="person">
+        UPDATE person
+        <trim prefix="set" suffixOverrides=",">
+            <if test="personName!=null">
+                person_name=#{personName},
+            </if>
+            <if test="personGender!=null">
+                person_gender=#{personGender},
+            </if>
+            <if test="description!=null">
+                description=#{description},
+            </if>
+        </trim>
+        WHERE id=#{id}
+    </update>
+    
+    <delete id="deletePerson" parameterType="int">
+        delete from person where id =#{id}
+    </delete>
+</mapper>
