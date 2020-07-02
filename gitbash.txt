@@ -29,3 +29,26 @@ cat <file>        查看文件内容
 git branch -a 查看远程分支
 git remote update origin  #fetch远程分支
 git checkout -b feature-Otest-3711 origin/feature-Otest-3711 切换分支
+
+
+
+
+
+git checkout -b bug_fix -t remotes/origin/bug_fix checkout -b 表示新建本地分支，bug_fix 为本地分支名，你也可以起别的名字。-t 表示追踪远程分支（track），remotes/origin/bug_fix 为远程分支名，查看检出结果：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
