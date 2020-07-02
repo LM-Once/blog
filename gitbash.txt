@@ -34,9 +34,15 @@ git checkout -b feature-Otest-3711 origin/feature-Otest-3711 切换分支
 
 
 
-git checkout -b bug_fix -t remotes/origin/bug_fix checkout -b 表示新建本地分支，bug_fix 为本地分支名，你也可以起别的名字。-t 表示追踪远程分支（track），remotes/origin/bug_fix 为远程分支名，查看检出结果：
+git checkout -b bug_fix -t remotes/origin/bug_fix    checkout -b 表示新建本地分支，bug_fix 为本地分支名，你也可以起别的名字。-t 表示追踪远程分支（track），remotes/origin/bug_fix 为远程分支名，查看检出结果：
+git checkout feature_shopping：切换到本地需求分支
+git push origin HEAD:refs/for/master：将本地需求分支的提交推送到远程 master 分支
 
+7. 回退提交
+commit 之后，发现提交多了，把不需要提交的也提交了，此时需要回退，有两种方式：
 
+git reset [--soft] commit_id，软回退，不会丢弃文件修改记录，--soft 不加也可以。
+git reset --hard commit_id，硬回退，丢弃所有修改。一般仅在需要回退到指定节点验证问题时使用。
 
 
 
