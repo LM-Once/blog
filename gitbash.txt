@@ -72,7 +72,8 @@ git reset --hard commit_id，硬回退，丢弃所有修改。一般仅在需要
 
 你可以使用 git log 命令来查看git的提交历史。git log 的输出如下,之一这里可以看到第一行就是 commitid：
 
-
+git reset --soft commitID 撤销push
+git reset HEAD . 撤销提交
 
 
 
