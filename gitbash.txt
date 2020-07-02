@@ -76,8 +76,12 @@ git reset --soft commitID 撤销push
 git reset HEAD . 撤销提交
 
 
+命令 git checkout --readme.txt 意思就是，把readme.txt文件在工作区做的修改全部撤销
+git checkout 命令加上 –b参数表示创建并切换，相当于如下2条命令
 
+　　git branch dev
 
+　　git checkout dev
 
 
 
