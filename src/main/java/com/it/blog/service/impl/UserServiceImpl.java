@@ -15,7 +15,7 @@ public interface UserServiceImpl {
 	
 	/**
 	 * 保存用户
-	 * @param user
+	 * @param
 	 * @return
 	 */
 	Map<String, Object> saveUser();
