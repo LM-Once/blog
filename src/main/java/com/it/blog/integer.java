@@ -24,7 +24,6 @@ public class integer {
 	    Integer l = 1230;
 	    Integer p = 1230;
 	    System.out.println(l == p);
-		System.out.println("OKOK");
 	}
 
 }
